@@ -46,7 +46,8 @@ a {
 }
 
 .hero {
-    background-image: url(images/cover.jpg);
+
+  background-image: url(images/bg2.webp);;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -61,7 +62,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(21, 20, 51, 0.8);
+    background-color: rgba(106, 61, 124, 0.8);
     z-index: -1;
 }
 
@@ -133,10 +134,11 @@ section {
 }
 
 .col-img {
-    background-image: url(images/professional.jpg);
-    background-position: center;
-    background-size: cover;
-    max-height: 630px;
+    background-image: url(images/bg3crop.png);
+    /* background-position: center; */
+    /* background-size:cover; */
+   width: 670px;
+   height: 534px;
 }
 
 
