@@ -30,6 +30,7 @@ else{
         values('$university_name','$university_address','$university_email','$university_contactnum','$carerguidanceHead','$carerguidanceNumber','$password')");
     
         $stmt->execute();
+        
         echo "Registration Successful";
     //    header('location: home.html');
 

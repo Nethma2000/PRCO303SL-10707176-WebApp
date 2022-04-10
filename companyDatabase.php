@@ -47,16 +47,31 @@
  <?php
 class Database
  {
-    private $dbserver="localhost";
-   private $dbuser="root";
-   private $dbpassword="123";
-   private $dbname="careernextgen";
+    public $dbserver="localhost";
+   public $dbuser="root";
+   public $dbpassword="123";
+   public $dbname="careernextgen";
 
     protected $conn;
 
+    public function __construct(){
+        try{
+
+            $dsn="mysql:host={$this->dbserver}; dbname={$this->dbname};charset=utf8";
+            $options=array(PDO::ATTR_PERSISTENT);
+            $this->conn=new PDO($dsn,$this->dbuser,$this->dbpassword,$options);
+        }
+
+        catch(PDOException $e){
+            echo "Connection Failed".$e->getMessage();
+        }
+       
 
 
-}
+    }
+    
+ }
+
 ?>
 
 
