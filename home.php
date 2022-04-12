@@ -53,7 +53,7 @@
                         <a class="nav-link" style="font-size: medium;color: #520670;" href="#contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="font-size: medium;color: #520670;" href="#contact">FAQ</a>
+                        <a class="nav-link" style="font-size: medium;color: #520670;" href="showFAQ.php">FAQ</a>
                     </li>
 
 
@@ -276,7 +276,7 @@
                         <hr>
                         <ul class="list-unstyled mb-4">
                             <li><i class='bx bxs-check-circle'></i>
-                                University Parnership</li>
+                                University Partnership</li>
                             <li><i class='bx bxs-check-circle'></i>
                                 Vacancy Pubication</li>
                             
@@ -367,21 +367,22 @@
                         <div class="address details">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="topic1">Address</div>
-                            <div class="text-one">Surkhet, NP12</div>
-                            <div class="text-two">Birendranagar 06</div>
+                            <div class="text-one">222,Gajaba Lane,</div>
+                            <div class="text-two">Kumbukawaththa,Gonapola</div>
+                            <div class="text-two">Sri Lanka</div>
                         </div>
                         <div class="phone details">
 
                             <i class="fas fa-phone-alt"></i>
                             <div class="topic1">Phone</div>
-                            <div class="text-one">+0098 9893 5647</div>
-                            <div class="text-two">+0096 3434 5678</div>
+                            <div class="text-one">076-6814648</div>
+                            <div class="text-two">071-9312176</div>
                         </div>
                         <div class="email details">
                             <i class="fas fa-envelope"></i>
                             <div class="topic1">Email</div>
-                            <div class="text-one">codinglab@gmail.com</div>
-                            <div class="text-two">info.codinglab@gmail.com</div>
+                            <div class="text-one">careernextgen@gmail.com</div>
+                            <div class="text-two">rmndhananjani@gmail.com</div>
                         </div>
                     </div>
                     <div class="right-side">
@@ -462,7 +463,7 @@
             <div class="row mb-5">
                 <div class="col-md-8 mx-auto text-center">
                     <h6 style="color: #520670;">TEAM</h6>
-                    <h1 style="font-family: 'Times New Roman', Times, serif;">Meet Our Crew Members</h1>
+                    <h1 style="font-family: 'Times New Roman', Times, serif;">Meet Our Admin Panel</h1>
                     <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque fuga
                         in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
                 </div>
@@ -470,8 +471,8 @@
             <div class="row text-center g-4">
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-member card-effect">
-                        <img src="images/adm1_ccexpress.jpeg" alt="">
-                        <h5 class="mb-0 mt-4">Sharbat Khan</h5>
+                        <img src="images/20210917_103155.jpg" alt="">
+                        <h5 class="mb-0 mt-4">Nethma Dhananjani</h5>
                         <p>Web Developer</p>
                         <div class="social-icons">
                             <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -483,7 +484,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-member card-effect">
                         <img src="images/adm1_ccexpress.jpeg" alt="">
-                        <h5 class="mb-0 mt-4">Sharbat Khan</h5>
+                        <h5 class="mb-0 mt-4">Nayana Kalyani</h5>
                         <p>Web Developer</p>
                         <div class="social-icons">
                             <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -495,7 +496,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-member card-effect">
                         <img src="images/adm1_ccexpress.jpeg" alt="">
-                        <h5 class="mb-0 mt-4">Sharbat Khan</h5>
+                        <h5 class="mb-0 mt-4">Sunil Rajapaksha</h5>
                         <p>Web Developer</p>
                         <div class="social-icons">
                             <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -507,7 +508,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-member card-effect">
                         <img src="images/adm1_ccexpress.jpeg" alt="">
-                        <h5 class="mb-0 mt-4">Sharbat Khan</h5>
+                        <h5 class="mb-0 mt-4">Viraj Karunarathna</h5>
                         <p>Web Developer</p>
                         <div class="social-icons">
                             <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -583,6 +584,8 @@
   </footer> -->
 
 
+
+</style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
