@@ -1,6 +1,6 @@
 <?php
  
- // connect with database
+
 $conn = new PDO("mysql:host=localhost;dbname=careernextgen", "root", "123");
  
     // check if FAQ exists
@@ -19,7 +19,7 @@ $conn = new PDO("mysql:host=localhost;dbname=careernextgen", "root", "123");
 // check if edit form is submitted
 if (isset($_POST["submit"]))
 {
-    // update the FAQ in database
+
     $sql = "UPDATE faqs SET question = ?, answer = ? WHERE id = ?";
     $statement = $conn->prepare($sql);
     $statement->execute([
@@ -28,7 +28,7 @@ if (isset($_POST["submit"]))
         $_POST["id"]
     ]);
  
-    // redirect back to previous page
+
     header("Location: " . $_SERVER["HTTP_REFERER"]);
 }
 
@@ -38,37 +38,31 @@ if (isset($_POST["submit"]))
 <link rel="stylesheet" type="text/css" href="faqcss/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="faqfont-awesome/css/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="faqrichtext/richtext.min.css" />
- 
-<!-- include JS -->
+
 <script src="faqjs/jquery-3.3.1.min.js"></script>
 <script src="faqjs/bootstrap.js"></script>
 <script src="faqrichtext/jquery.richtext.js"></script>
- 
-<!-- layout for form to edit FAQ -->
+
 <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
     <div class="row">
         <div class="offset-md-3 col-md-6">
             <h1 class="text-center">Edit FAQ</h1>
  
-            <!-- form to edit FAQ -->
             <form method="POST" action="editFAQ.php">
  
-                <!-- hidden ID field of FAQ -->
                 <input type="hidden" name="id" value="<?php echo $faq['id']; ?>" required />
  
-                <!-- question, auto-populate -->
                 <div class="form-group">
                     <label>Enter Question</label>
                     <input type="text" name="question" class="form-control" value="<?php echo $faq['question']; ?>" required />
                 </div>
  
-                <!-- answer, auto-populate -->
                 <div class="form-group">
                     <label>Enter Answer</label>
                     <textarea name="answer" id="answer" class="form-control" required><?php echo $faq['answer']; ?></textarea>
                 </div>
  
-                <!-- submit button -->
+         
                 <input type="submit" name="submit" class="btn btn-warning" value="Edit FAQ" />
             </form>
         </div>

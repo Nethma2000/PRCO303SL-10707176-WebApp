@@ -1,9 +1,8 @@
 <?php
- 
-    // connect with database
+
     $conn = new PDO("mysql:host=localhost;dbname=careernextgen", "root", "123");
  
-    // fetch all FAQs from database
+ 
     $sql = "SELECT * FROM faqs";
     $statement = $conn->prepare($sql);
     $statement->execute();
@@ -14,11 +13,11 @@
 <link rel="stylesheet" type="text/css" href="faqcss/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="faqfont-awesome/css/font-awesome.css" />
  
-<!-- include JS -->
+
 <script src="faqjs/jquery-3.3.1.min.js"></script>
 <script src="faqjs/bootstrap.js"></script>
  
-<!-- show all FAQs in a panel -->
+
 <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
     <div class="row">
         <div class="col-md-12 accordion_one">
@@ -26,7 +25,7 @@
                 <?php foreach ($faqs as $faq): ?>
                     <div class="panel panel-default">
  
-                        <!-- button to show the question -->
+                        
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="#faq-<?php echo $faq['id']; ?>" aria-expanded="false" class="collapsed">
@@ -35,7 +34,7 @@
                             </h4>
                         </div>
  
-                        <!-- accordion for answer -->
+                       
                         <div id="faq-<?php echo $faq['id']; ?>" class="panel-collapse collapse" aria-expanded="false" role="tablist" style="height: 0px;">
                             <div class="panel-body">
                                 <div class="text-accordion">

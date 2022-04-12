@@ -1,6 +1,6 @@
 <?php
 
-// connect database
+
 $conn = new PDO("mysql:host=localhost;dbname=careernextgen", "root", "123");
  
 // check if FAQ existed
@@ -16,14 +16,14 @@ if (!$faq)
     die("FAQ not found");
 }
 
-// delete from database
+
 $sql = "DELETE FROM faqs WHERE id = ?";
 $statement = $conn->prepare($sql);
 $statement->execute([
     $_POST["id"]
 ]);
 
-// redirect to previous page
+
 header("Location: " . $_SERVER["HTTP_REFERER"]);
 
 ?>

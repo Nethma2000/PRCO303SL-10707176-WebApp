@@ -1,6 +1,6 @@
 <?php
 
-// connect with database
+
 $conn = new PDO("mysql:host=localhost;dbname=careernextgen", "root", "123");
 
 // check if insert form is submitted
@@ -15,7 +15,7 @@ if (isset($_POST["submit"])) {
     $statement = $conn->prepare($sql);
     $statement->execute();
 
-    // insert in faqs table
+   
     $sql = "INSERT INTO faqs (question, answer) VALUES (?, ?)";
     $statement = $conn->prepare($sql);
     $statement->execute([
@@ -24,7 +24,7 @@ if (isset($_POST["submit"])) {
     ]);
 }
 
-// get all faqs from latest to oldest
+
 $sql = "SELECT * FROM faqs ORDER BY id DESC";
 $statement = $conn->prepare($sql);
 $statement->execute();
@@ -42,14 +42,12 @@ $faqs = $statement->fetchAll();
 <html>
 
 <head>
-    <!--  bootstrap, font awesome and rich text library CSS -->
-
-    <!-- include bootstrap, font awesome and rich text library CSS -->
+    
     <link rel="stylesheet" type="text/css" href="faqcss/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="faqfont-awesome/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="faqrichtext/richtext.min.css" />
 
-    <!-- include jquer, bootstrap and rich text JS -->
+
     <script src="faqjs/jquery-3.3.1.min.js"></script>
     <script src="faqjs/bootstrap.js"></script>
     <script src="faqrichtext/jquery.richtext.js"></script>
@@ -58,28 +56,25 @@ $faqs = $statement->fetchAll();
 
 
 <body>
-    <!-- layout for form to add FAQ -->
+   
     <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
         <div class="row">
             <div class="offset-md-3 col-md-6">
                 <h1 class="text-center">Add FAQ</h1>
 
-                <!-- for to add FAQ -->
+             
                 <form method="POST" action="addfaq.php">
 
-                    <!-- question -->
                     <div class="form-group">
                         <label>Enter Question</label>
                         <input type="text" name="question" class="form-control" required />
                     </div>
 
-                    <!-- answer -->
                     <div class="form-group">
                         <label>Enter Answer</label>
                         <textarea name="answer" id="answer" class="form-control" required></textarea>
                     </div>
 
-                    <!-- submit button -->
                     <input type="submit" name="submit" class="btn btn-info" value="Add FAQ" />
                 </form>
             </div>
@@ -88,7 +83,6 @@ $faqs = $statement->fetchAll();
         <div class="row">
             <div class="offset-md-2 col-md-8">
                 <table class="table table-bordered">
-                    <!-- table heading -->
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -98,7 +92,6 @@ $faqs = $statement->fetchAll();
                         </tr>
                     </thead>
 
-                    <!-- table body -->
                     <tbody>
                         <?php foreach ($faqs as $faq) : ?>
                             <tr>
