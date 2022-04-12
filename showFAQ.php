@@ -50,9 +50,12 @@
 </div>
 
 <style>
+
+
 .accordion_one .panel-group {
     border: 1px solid #f1f1f1;
     margin-top: 100px
+    
 }
 a:link {
     text-decoration: none
