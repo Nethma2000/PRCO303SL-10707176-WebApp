@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
 if(isset($_POST)) {
 
 	//Escape Special Characters In String First

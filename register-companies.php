@@ -34,9 +34,6 @@
 
   <header class="main-header">
 
-   
-
-   
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="margin-left: 0px;">
