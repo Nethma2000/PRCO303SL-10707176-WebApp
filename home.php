@@ -67,8 +67,8 @@
                     <div class="dropdown-content">
                         <a href="sign.html">Student</a>
                         <a href="universitylogin.html">University</a>
-                        <a href="companylogin.html">Company</a>
-                        <a href="advisorlogin.html">Advisor</a>
+                        <a href="jobPortal/login-company.php">Company</a>
+                        <a href="login-advisor.php">Advisor</a>
                         <a href="adminlogin.html">Admin</a>
                     </div>
 
@@ -205,7 +205,7 @@
                                 <i class='bx bxs-comment-edit'></i>
                             </div>
                             <div>
-                                <h5>Feature</h5>
+                                <h5>24x7 Access</h5>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
                             </div>
                         </div>
@@ -287,7 +287,7 @@
                         </ul>
                         <button type="button" class="btn float-left"
                         style="background:linear-gradient(to right,#a506e4, #520670);color: white;">Read More</button>
-                        <button type="button" onclick="document.location='companylogin.html'" class="btn btn-primary float-right"
+                        <button type="button" onclick="document.location='jobPortal/register-company.php'" class="btn btn-primary float-right"
                             style="background:linear-gradient(to right,#a506e4, #520670);">Join</button>
                     </div>
                 </div>
@@ -389,7 +389,7 @@
                         <div class="topic1-text">Send us a message</div>
                         <p>If you have any work from me or any types of quries related to my tutorial, you can send me
                             message from here. It's my pleasure to help you.</p>
-                        <form action="#">
+                        <form action="contactadmin.php">
                             <div class="input-box">
                                 <input type="text" placeholder="Enter your name">
                             </div>

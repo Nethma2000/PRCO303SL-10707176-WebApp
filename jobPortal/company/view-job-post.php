@@ -46,7 +46,7 @@ require_once("../db.php");
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-green sidebar-mini">
+<body style="background-color: purple;" class="hold-transition skin- sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -56,7 +56,7 @@ require_once("../db.php");
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>J</b>P</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Job Portal<</b></span>
+      <span style="color: white;" class="logo-lg"><b>Job Portal</b></span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->

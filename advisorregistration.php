@@ -6,8 +6,8 @@ if (isset($_POST["email"])) {
     sleep(5);
     $query = "
  INSERT INTO advisors 
- (name,company,designation,field,mobileno,email,password,medium,linkedin,github,qualifications,work_experience,status) VALUES 
- (:name, :company, :designation, :field, :mobileno, :email, :password,:medium, :linkedin, :github, :qualifications, :work_experience, '')
+ (name,company,designation,field,mobileno,email,password,medium,linkedin,github,qualifications,work_experience) VALUES 
+ (:name, :company, :designation, :field, :mobileno, :email, :password,:medium, :linkedin, :github, :qualifications, :work_experience)
  ";
     //  $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $user_data = array(
@@ -100,7 +100,8 @@ if (isset($_POST["email"])) {
     <div class="container box">
         <br />
 
-        <h2 align="center">Regsitration - Career Advisor</h2><br />
+        <h2 align="center">Regsitration - Career Advisor</h2>
+        <h4 align="center">Already have an account?<a href="login-advisor.php">    Login now</a></h4><br/><br>
 
         <?php echo $message; ?>
         <form method="post" id="register_form">
