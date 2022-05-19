@@ -4,9 +4,13 @@
 
 $name=$_POST['name'];
 $email=$_POST['email'];
-$category=$_POST['category'];
-$institute=$_POST['institute'];
 $password=$_POST['password'];
+$institute=$_POST['institute'];
+$stdid=$_POST['stdid'];
+$category=$_POST['category'];
+$mobile=$_POST['mobile'];
+
+
 
 
  $con= new mysqli('localhost','root','123','careernextgen');
@@ -24,8 +28,8 @@ else{
 
     }
     else{
-        $stmt=$con->prepare("insert into students(name,email,category,institute,password)
-        values('$name','$email','$category','$institute','$password')");
+        $stmt=$con->prepare("insert into students(name,email,category,institute,password,stdid,mobile)
+        values('$name','$email','$category','$institute','$password','$stdid','$mobile')");
     
         $stmt->execute();
          echo "Registration Successful";
