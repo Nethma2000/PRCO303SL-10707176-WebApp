@@ -7,8 +7,8 @@ if(isset($_POST['stusignup']) && isset($_POST['stuname']) && isset($_POST['stuem
     $stupass=$_POST['stupass'];
 
 
-    $sql="INSERT INTO studentenroll(stu_name,stu_email,stu_pass)
-    VALUES('$stuname','$stuemail','$stupass')";
+    $sql="INSERT INTO studentenroll(stuname,stuemail,stupass,stu_occ,stu_img)
+    VALUES('$stuname','$stuemail','$stupass','','')";
 
 
 if($conn->query($sql)== TRUE){

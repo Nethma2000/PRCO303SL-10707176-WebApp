@@ -333,7 +333,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form id="stuLoginForm">
+      <form id="stuLoginForm" action="loginstudent.php" method="post">
     
   <div class="form-group">
   <i style="color: purple;" class="fas fa-envelope"></i>
@@ -348,13 +348,14 @@
     <small id="passwordHelp" class="form-text text-muted"><h6 style="color: red;">Please enter the same password of your Career NextGen account</h6></small>
 
   </div>
+  <button style="background-color: purple;color:white;" type="submit" id="stuLoginBtn" class="btn btn-">Login</button>
 
   
 </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button style="background-color: purple;color:white;" type="button" id="stuLoginBtn" class="btn btn-">Login</button>
+        <!-- <button style="background-color: purple;color:white;" type="button" id="stuLoginBtn" class="btn btn-">Login</button> -->
       </div>
     </div>
   </div>
@@ -371,7 +372,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form id="adminLoginForm">
+      <form id="adminLoginForm" action="loginadmin.php" method="POST">
     
   <div class="form-group">
   <i style="color: purple;" class="fas fa-envelope"></i>
@@ -385,12 +386,12 @@
 
   </div>
 
-  
+  <button style="background-color: purple;color:white;" type="submit" id="adminLoginBtn" class="btn btn-">Login</button>
+
 </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button style="background-color: purple;color:white;" type="button" id="adminLoginBtn" class="btn btn-">Login</button>
       </div>
     </div>
   </div>
