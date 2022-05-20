@@ -1,0 +1,96 @@
+body{
+    background-color: purple;
+}
+
+.navbar-brand{
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.custom-nav .custom-nav-item a{
+    color: white !important;
+
+}
+
+.custom-nav-item:hover{
+    background-color: purple;
+    border:solid purple;
+    border-radius: 10px;
+}
+
+.h1{
+    color: blue;
+}
+
+.vid-parent{
+    position: relative;
+}
+
+.remove-vid-marg{
+    margin: 0px;
+    padding: 0px;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+
+}
+
+.vid-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #141e24;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.vid-content{
+    position: absolute;
+    z-index: 2;
+    top:35%;
+    left:35%;
+    color: white;
+  
+
+    
+}
+
+
+
+.bottom-banner{
+    color: white;
+    padding: 10px;
+}
+
+
+@media screen  and (min-width:0px) and (max-width:700px) {
+    .my-content,
+    .txt-banner{
+        display: none;
+
+    }
+
+    .vid-content{
+        top:12%;
+        left: 60%;
+    }
+
+    .custom-nav .custom-nav-item a{
+        padding: 10px 20px;
+        background-color: purple;
+    }
+
+    .custom-nav-item:hover{
+        background-color: none;
+        border: none;
+        border-radius: none;
+    }
+    
+}
