@@ -111,7 +111,7 @@ require_once("../db.php");
                   } else if ($row['status'] == 1) {
                     echo '<div class="pull-right"><strong class="text-red">Rejected</strong></div>';
                   } else if ($row['status'] == 2) {
-                    echo '<div class="pull-right"><strong class="text-green">Under Review</strong></div> ';
+                    echo '<div class="pull-right"><strong class="text-green">Shortlisted</strong></div> ';
                   }
                   ?>
                                 

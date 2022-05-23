@@ -55,8 +55,7 @@ if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
       </div>
       <div class="row">
         <div class="col-xs-8">
-          <a href="#">I don't have an account</a>
-         
+          <a href="http://localhost/CareerNextGenWeb/studentroleselection.php">I don't have an account</a>
         </div>
         <div class="col-xs-8">
           <a href="register-candidates.php">Haven't you completed your job profile?</a>
@@ -78,7 +77,7 @@ if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
     if(isset($_SESSION['registerCompleted'])) {
       ?>
       <div>
-        <p id="successMessage" class="text-center">Check your email!</p>
+        <p id="successMessage" class="text-center">Try login!</p>
       </div>
     <?php
      unset($_SESSION['registerCompleted']); }

@@ -65,7 +65,7 @@
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="sign.html">Student</a>
+                        <a href="studentroleselection.php">Student</a>
                         <a href="universitylogin.html">University</a>
                         <a href="jobPortal/login-company.php">Company</a>
                         <a href="login-advisor.php">Advisor</a>

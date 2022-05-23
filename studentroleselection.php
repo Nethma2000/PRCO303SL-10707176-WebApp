@@ -1,40 +1,19 @@
-<?php
+<?php 
 
-//To Handle Session Variables on This Page
-session_start();
+// session_start();
 
-if(empty($_SESSION['id_user'])) {
-  header("Location: ../index.php");
-  exit();
-}
+// if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) { 
+//   header("Location: index.php");
+//   exit();
+// }
 
-
-//Including Database Connection From db.php file to avoid rewriting in all files
-require_once("../db.php");
-
-$sql = "SELECT * FROM apply_job_post WHERE id_user='$_SESSION[id_user]' AND id_jobpost='$_GET[id]'";
-$result = $conn->query($sql);
-if($result->num_rows > 0) 
-{
-  
-  $sql1 = "SELECT * FROM job_post INNER JOIN company ON job_post.id_company=company.id_company WHERE id_jobpost='$_GET[id]'";
-  $result1 = $conn->query($sql1);
-  if($result1->num_rows > 0) 
-  {
-    $row = $result1->fetch_assoc();
-  }
-
-} else {
-  header("Location: index.php");
-  exit();
-}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Job Portal</title>
+  <title>Career NextGen Registration Step1</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -44,10 +23,10 @@ if($result->num_rows > 0)
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../css/AdminLTE.min.css">
-  <link rel="stylesheet" href="../css/_all-skins.min.css">
+  <link rel="stylesheet" href="jobportal/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="jobPortal/css/_all-skins.min.css">
   <!-- Custom -->
-  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="jobPortal/css/custom.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -69,7 +48,7 @@ if($result->num_rows > 0)
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>J</b>P</span>
       <!-- logo for regular state and mobile devices -->
-      <span style="color: white;" class="logo-lg"><b>Job Portal</b> </span>
+      <span style="color: white;" class="logo-lg"><b>Career</b>NextGen</span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -77,9 +56,9 @@ if($result->num_rows > 0)
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <li>
-            <a href="../jobs.php">Jobs</a>
-          </li>         
+        <li>
+            <a style="color: white;font-weight:bold;color:aqua;font-size:18px" href="http://localhost/CareerNextGenWeb/home.php">Go back to Main Home Page</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -88,39 +67,33 @@ if($result->num_rows > 0)
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="margin-left: 0px;">
 
-    <section id="candidates" class="content-header">
+    <section class="content-header">
       <div class="container">
-        <div class="row">          
-          <div class="col-md-9 bg-white padding-2">
-            <div class="pull-left">
-              <h2><b><i><?php echo $row['jobtitle']; ?></i></b></h2>
-            </div>
-            <div class="pull-right">
-              <a href="index.php" class="btn btn-default btn-lg btn-flat margin-top-20"><i class="fa fa-arrow-circle-left"></i> Back</a>
-            </div>
-            <div class="clearfix"></div>
-            <hr>
-            <div>
-              <p><span class="margin-right-10"><i class="fa fa-location-arrow text-green"></i> <?php echo $row['city']; ?></span> <i class="fa fa-calendar text-green"></i> <?php echo date("d-M-Y", strtotime($row['createdat'])); ?></p>              
-            </div>
-            <div>
-              <?php echo stripcslashes($row['description']); ?>
-            </div>
-            
-            
-          </div>
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <img src="../uploads/logo/<?php echo $row['logo']; ?>" alt="companylogo">
-              <div class="caption text-center">
-                <h3><?php echo $row['companyname']; ?></h3>
-                <p><a href="#" class="btn btn-primary btn-flat" role="button">More Info</a>
-                <hr>
-                <div class="row">
-                  <!-- <div class="col-md-4"><a href=""><i class="fa fa-warning"></i> Report</a></div>
-                  <div class="col-md-4"><a href=""><i class="fa fa-envelope"></i> Email</a></div> -->
-                </div>
+        <div class="row latest-job margin-top-50 margin-bottom-20">
+          <h1 class="text-center margin-bottom-20">Student Role Selection</h1>
+          <div class="col-md-6 latest-job ">
+            <div style="background-color: #3b1754;" class="small-box  padding-5">
+              <div class="inner">
+                <h3 style="color:wheat" class="text-center">Undergraduate</h3>
               </div>
+              <p style="font-weight:bolder;color:wheat">If you are a student of any university,please proceed for the undergraduate login and signup from here </p>
+         
+              <a style="color:wheat;font-weight:bold;" href="signundergraduates.html" class="small-box-footer">
+                Proceed <i class="fa fa-arrow-circle-right"></i>
+              </a>
+         
+             
+             
+            </div>
+          </div>
+          <div class="col-md-6 latest-job ">
+            <div style="background-color: #73073f;" class="small-box  padding-5">
+              <div class="inner">
+                <h3 style="color:wheat"  class="text-center">Graduate/<br>School Leaver </h3>
+              </div>
+              <a style="color:wheat;font-weight:bold;"  href="sign.html" class="small-box-footer">
+                Proceed <i class="fa fa-arrow-circle-right"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -132,7 +105,6 @@ if($result->num_rows > 0)
   </div>
   <!-- /.content-wrapper -->
 
-  
 
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
@@ -147,6 +119,6 @@ if($result->num_rows > 0)
 <!-- Bootstrap 3.3.7 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../js/adminlte.min.js"></script>
+<script src="js/adminlte.min.js"></script>
 </body>
 </html>

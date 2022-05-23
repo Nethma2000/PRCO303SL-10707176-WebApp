@@ -55,6 +55,9 @@ require_once("db.php");
       <!-- Navbar Right Menu -->
       <div style="background-color: purple;" class="navbar-custom-menu">
         <ul class="nav navbar-nav">
+        <li>
+            <a style="color: white;font-weight:bold;color:aqua;font-size:18px" href="http://localhost/CareerNextGenWeb/home.php">Go back to Main Home Page</a>
+          </li>
           <li>
             <a style="color: white;" href="jobs.php">Jobs</a>
           </li>
@@ -114,7 +117,7 @@ require_once("db.php");
       <div class="container">
         <div class="row">
           <div class="col-md-12 latest-job margin-bottom-20">
-            <h1 class="text-center">Latest Jobs</h1>            
+            <h1 class="text-center"><a href="jobs.php">Latest Jobs</a></h1>            
             <?php 
           /* Show any 4 random job post
            * 

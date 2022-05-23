@@ -56,6 +56,9 @@ require_once("db.php");
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
+        <li>
+            <a style="color: white;font-weight:bold;color:aqua;font-size:18px" href="http://localhost/CareerNextGenWeb/home.php">Go back to Main Home Page</a>
+          </li>
           <li>
             <a style="color: white;" href="jobs.php">Jobs</a>
           </li>

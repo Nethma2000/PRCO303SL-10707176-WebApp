@@ -39,7 +39,7 @@ if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <b>Welcome to Job Portal!!!</b> 
+    <b>Welcome to Career NextGen!!!</b> 
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

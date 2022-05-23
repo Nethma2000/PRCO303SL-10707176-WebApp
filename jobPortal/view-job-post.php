@@ -127,9 +127,9 @@ require_once("db.php");
                       <div class="row">
 
 
-
+<!-- 
                         <div class="col-md-4"><a href=""><i class="fa fa-warning"></i> Report</a></div>
-                        <div class="col-md-4"><a href=""><i class="fa fa-envelope"></i> Email</a></div>
+                        <div class="col-md-4"><a href=""><i class="fa fa-envelope"></i> Email</a></div> -->
                       </div>
                     </div>
                   </div>

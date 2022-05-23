@@ -57,6 +57,9 @@ require_once("db.php");
         <ul class="nav navbar-nav">
           <?php if(empty($_SESSION['id_user']) && empty($_SESSION['id_company'])) { ?>
             <li>
+            <a style="color: white;" href="index.php">Job Portal Dashboard</a>
+          </li>
+            <li>
             <a style="color: white;" href="login.php">Login</a>
           </li>
           <li>
