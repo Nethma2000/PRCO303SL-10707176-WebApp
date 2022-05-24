@@ -47,6 +47,8 @@ $faqs = $statement->fetchAll();
     <link rel="stylesheet" type="text/css" href="faqfont-awesome/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="faqrichtext/richtext.min.css" />
 
+  <title>FAQ Section - Add FAQ</title>
+
 
     <script src="faqjs/jquery-3.3.1.min.js"></script>
     <script src="faqjs/bootstrap.js"></script>
@@ -56,39 +58,41 @@ $faqs = $statement->fetchAll();
 
 
 <body>
+
+
    
     <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
-        <div class="row">
+        <div  class="row">
             <div class="offset-md-3 col-md-6">
-                <h1 class="text-center">Add FAQ</h1>
+                <h1 style="color: purple;" class="text-center">Add FAQ</h1>
 
              
-                <form method="POST" action="addfaq.php">
+                <form  method="POST" action="addfaq.php">
 
-                    <div class="form-group">
+                    <div  style="color: purple;" class="form-group">
                         <label>Enter Question</label>
                         <input type="text" name="question" class="form-control" required />
                     </div>
 
-                    <div class="form-group">
+                    <div  style="color: purple;" class="form-group">
                         <label>Enter Answer</label>
                         <textarea name="answer" id="answer" class="form-control" required></textarea>
                     </div>
 
-                    <input type="submit" name="submit" class="btn btn-info" value="Add FAQ" />
+                    <input  style="background-color: purple;color:white" type="submit" name="submit" class="btn btn-info" value="Add FAQ" />
                 </form>
             </div>
         </div>
 
         <div class="row">
-            <div class="offset-md-2 col-md-8">
+            <div  class="offset-md-2 col-md-8">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Question</th>
-                            <th>Answer</th>
-                            <th>Actions</th>
+                            <th style="color: purple;">ID</th>
+                            <th style="color: purple;">Question</th>
+                            <th style="color: purple;">Answer</th>
+                            <th style="color: purple;">Actions</th>
                         </tr>
                     </thead>
 
@@ -99,13 +103,13 @@ $faqs = $statement->fetchAll();
                                 <td><?php echo $faq["question"]; ?></td>
                                 <td><?php echo $faq["answer"]; ?></td>
                                 <td>
-                                    <a href="editFAQ.php?id=<?php echo $faq['id']; ?>" class="btn btn-warning btn-sm">
+                                    <a style="background-color: #0eb082;color:white" href="editFAQ.php?id=<?php echo $faq['id']; ?>" class="btn btn- btn-sm">
                                         Edit
                                     </a>
 
                                     <form method="POST" action="deleteFAQ.php" onsubmit="return confirm('Are you sure you want to delete this FAQ ?');">
                                         <input type="hidden" name="id" value="<?php echo $faq['id']; ?>" required />
-                                        <input type="submit" value="Delete" class="btn btn-danger btn-sm" />
+                                        <input type="submit" value="Delete" style="background-color: #d13c0f;color:white" class="btn btn- btn-sm" />
                                     </form>
                                 </td>
                             </tr>

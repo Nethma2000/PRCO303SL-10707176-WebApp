@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg py-2 sticky-top navbar-light bg-light">
         <div class="container">
 
-            <a class="navbar-brand" href="#" style="color: #520670; font-weight: bold; font-size: x-large;">Career
+            <a class="navbar-brand" href="home.php" style="color: #520670; font-weight: bold; font-size: x-large;">Career
                 NextGen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

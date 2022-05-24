@@ -28,8 +28,9 @@ if (isset($_POST["submit"]))
         $_POST["id"]
     ]);
  
+ header("Location:addFAQ.php");
 
-    header("Location: " . $_SERVER["HTTP_REFERER"]);
+    // header("Location: " . $_SERVER["HTTP_REFERER"]);
 }
 
  
