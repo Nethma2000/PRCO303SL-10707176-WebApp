@@ -1,0 +1,80 @@
+Development environment
+Tools: Visual Studio, Microsoft SQL Server Management Studio 18
+Framework: ASP.NET MVC 5
+Library: SignaIR 2.2.0, knockoutjs 3.4.2 . bindling support library
+##I. Setting
+
+1. Environment, tools
+1.1 SQL Server 2018: Link
+
+1.2 SQL Server Management Studio (SSMS): Link
+
+1.3 Installing Visual Studio: Link
+
+2. Create open database
+Open SQL Server Management Studio (SSMS) create a new database named: chatrealtime
+
+Open sourcecode with Visual Studio and build
+Open sourcecode by opening Project from Visual Studio, then select Chat.sln file in sourcecode ** Note: Clone sourcecode in master branch for best stability!
+4. Add database
+Open SQL Server Management Studio:
+
+Create a new database named: chatrealtime
+Open sourcecode with Visual Studio:
+
+Make a connection to the local database by modifying the Web.config file:
+Data Source = SQL Server Name
+Initial Catalog = Database Name => chatrealtime
+After successfully run the command update-database update-database
+
+5. Run the project
+Right click on the Solution of the project in Visual Studio, select Build Solution
+
+5. Run the project and use
+In Visual Studio, press Ctrl + F5 to run
+II. How to use the features
+1. Create an account
+Note: Create an account with a password with uppercase, lowercase letters, numbers, special characters and more than 8 characters.
+
+Note: Create 2 accounts and login on 2 different browsers or stay anonymous to see realtime status
+
+2. Create and edit groups that are updated in real time
+Create a group
+
+Click the + sign at the top, left to see the group creation interface
+Name the group and add members.
+Edit groups - only admins who create groups can edit groups
+
+Click on the edit icon at the top when opening the group
+Make changes and press Update
+3. Update your account online status
+When the accounts are logged in, they can update their status at LIST FRIENDS on the interface
+4. Real-time messaging in groups and individuals
+By group
+
+Clicking on a group in LIST ROOMS will open the chat screen
+Type the message and press Enter
+Personal
+
+Clicking on a group in LIST FRIENDS will open the chat screen
+Click the message and press Enter
+5. Pin Messages
+Open group or individual chat window
+Click on the pin icon next to each message
+Clicking on the pinned message will see the message window automatically scroll to the position of the pinned message
+
+
+
+
+
+
+
+
+https://pusher.com/tutorials/chat-aspnet/
+
+https://www.codeproject.com/Articles/25261/A-WCF-WPF-Chat-Application
+https://itzone.com.vn/en/article/setup-realtime-chat-application-with-signalr-and-asp-net/
+https://github.com/taduyhieu/chat-realtime/blob/master/Chat.Web/Controllers/AccountController.cs
+https://www.c-sharpcorner.com/article/simple-login-and-registration-form-in-asp-net-mvc-using-ado-net/
+
+https://www.google.com/search?q=Add+database+Open+SQL+Server+Management+Studio%3ACreate+a+new+database+named%3A+chatrealtime+Open+sourcecode+with+Visual+Studio%3A+Create+connection+with+local+database+by+changing+the+Web.config+file%3A+Data+Source+%3D+SQL+Server+Initial+Catalog+Name+%3D+Database+Name+%3D%3E+chatrealtime+After+successfully+running+the+update-database+update+command&oq=Add+database+Open+SQL+Server+Management+Studio%3ACreate+a+new+database+named%3A+chatrealtime+Open+sourcecode+with+Visual+Studio%3A+Create+connection+with+local+database+by+changing+the+Web.config+file%3A+Data+Source+%3D+SQL+Server+Initial+Catalog+Name+%3D+Database+Name+%3D%3E+chatrealtime+After+successfully+running+the+update-database+update+command&aqs=chrome..69i57.374j0j9&sourceid=chrome&ie=UTF-8

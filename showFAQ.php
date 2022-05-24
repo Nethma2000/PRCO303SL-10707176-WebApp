@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" type="text/css" href="faqcss/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="faqfont-awesome/css/font-awesome.css" />
- 
+ <title>FAQ Section</title>
 
 <script src="faqjs/jquery-3.3.1.min.js"></script>
 <script src="faqjs/bootstrap.js"></script>
