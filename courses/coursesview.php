@@ -12,6 +12,10 @@ Admin home-Courses
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+<?php
+include('dbConnection.php');
+
+?>
     </head>
     <body>
         <nav class="navbar navbar-dark fixed-top p-0 shadow"
@@ -62,9 +66,8 @@ Admin home-Courses
                         Settings
                     </a>
                 </li>
-               
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">
+                    <a class="nav-link" href="#">
                         <i class="fas fa-accessibe-icon"></i>
                         Logout
                     </a>
@@ -73,37 +76,16 @@ Admin home-Courses
         </div>
     </nav>
 
+    <?php
+
+    $sql="SELECT * FROM course";
+    $result=$conn->query($sql);
+    if($result->num_rows>0){
+
+    ?>
+
     <div class="col-sm-9 mt-5">
-        <div class="row mx-5 text-center">
-            <div class="col-sm-4 mt-5">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-            <div class="card-header">Courses</div>
-            <div class="card-body">
-                <h4 class="card-title">5</h4>
-                <a class="btn text-white" href="#">view</a>
-            </div>
-            </div>
-            </div>
-            <div class="col-sm-4 mt-5">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-            <div class="card-header">Enrollments</div>
-            <div class="card-body">
-                <h4 class="card-title">5</h4>
-                <a class="btn text-white" href="#">view</a>
-            </div>
-            </div>
-            </div>
-        
-            <div class="col-sm-4 mt-5">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-            <div class="card-header">Feedbacks</div>
-            <div class="card-body">
-                <h4 class="card-title">5</h4>
-                <a class="btn text-white" href="#">view</a>
-            </div>
-            </div>
-            </div>
-        </div>
+      
         <div class="mx-5 mt-5 text-center">
             <p class="bg-dark text-white p-2">Courses</p>
             <table class="table">
@@ -111,34 +93,83 @@ Admin home-Courses
                     <tr>
                         <th scope="col">Course ID</th>
                         <th scope="col">Course Name</th>
-                        <th scope="col">Course Duration</th>
                         <th scope="col">Course Category</th>
-                        <th scope="col">Course lessons</th>
+                        <th scope="col">Course duration</th>
 
                         <th scope="col">Acion</th>
 
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">22</th>
-                        <td>100</td>
-                        <td>dsfg</td>
-                        <td>asdfg</td>
-                        <td>sdf</td>
-                        <td><button type="submit" class="btn btn-secondary" name="delete" value="Delete">
+
+                <?php while($row=$result->fetch_assoc()){ 
+
+                
+                   echo '<tr>';
+                        echo '<th scope="row">'.$row['course_id'].'</th>';
+                        echo '<td>'.$row['course_name'].'</td>';
+                        echo '<td>'.$row['course_category'].'</td>';
+                        echo '<td>'.$row['course_duration'].'</td>';
+                        // echo '<td>'.row['course_id'].'</td>';
+                        echo '<td>';
+                        echo '
+                        
+                        <form action="editcourse.php" method="POST" class="d-inline">
+                        <input type="hidden" name="id" value='.$row['course_id'].'>
+
+                        <button type="submit" class="btn btn-info mr-3" name="view" value="View">
+                            <i class="fas fa-pen"></i>
+                        </button>
+</form>
+                        <form action="" method="POST" class="d-inline">
+                        <input type="hidden" name="id" value='.$row['course_id'].'>
+                        <button type="submit" class="btn btn-secondary" name="delete" value="Delete">
                             <i class="far fa-trash-alt"></i>
                         </button>
+                        </form>
+                        <!-- </td>
+                        <td><button type="submit" class="btn btn-secondary" name="edit" value="Edit">
+                            <i class="far fa-edit"></i>
+                        </button> -->
                         </td>
-                    </tr>
+                    </tr>';
+                     } ?>
                 </tbody>
             </table>
+    <?php } else{
+        echo "No data found";
+    }
+
+    if(isset($_REQUEST['delete'])){
+        $sql="DELETE FROM course WHERE course_id={$_REQUEST['id']}";
+        if($conn->query($sql)==TRUE){
+            echo '<meta http-equiv="refresh" content="0;URL=?deleted" />';
+
+        }
+        else{
+            echo "Unable to delete data"; 
+        }
+    }
+
+
+
+
+
+
+        ?>
         </div>
     </div>
+
+    <?php  ?>
+    <div>
+        <a class="btn btn-danger box" href="addCourse.php">
+            <i class="fas fa-plus fa-2x"></i>
+        </a>
+    </div>
 </div>
+<!-- </div>
 </div>
-</div>
-</div>
+</div> -->
 
 <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

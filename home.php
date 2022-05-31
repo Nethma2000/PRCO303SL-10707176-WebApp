@@ -196,9 +196,7 @@
                     <div class="col-md-10 offset-md-1">
                         <h6 style="color: #520670;">WHY TO CHOOSE US</h6>
                         <h1 style="font-family: 'Times New Roman', Times, serif;">Best solution to Spark Up Your Career</h1>
-                        <p>Lorem ipsum dolor sit  distinctnnnnnnnnnnnnnnnnn
-                            nnnnnnnnnio eveniet eaque
-                           t</p>
+                        <p>You can experience te best ever falicities from here withus at Career NextGen!</p>
 
                         <div class="feature d-flex mt-3">
                             <div class="iconbox me-3">

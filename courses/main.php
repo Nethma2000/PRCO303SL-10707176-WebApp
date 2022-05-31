@@ -90,53 +90,53 @@
     <div class="card">
       <!-- <img src="#" class="card-img-top" alt="guitar"/> -->
       <div class="card-body">
-        <h5 class="card-title">Learn easily</h5>
-        <p class="card-text">frgyhrthytryhrhdfhggggg
+        <h5 style="color: purple;" class="card-title">English Language</h5>
+        <p style="color: purple;" class="card-text">Basics about professional English
           </p>
 
     </div>
     <div class="card-footer">
-      <p class="card-text d-inline">Price:  <small><del>
-        &#8377 2000
+      <p style="color: purple;" class="card-text d-inline">Duration:  <small><del>
+       
       </del></small>
-      <span class="font-weight-bolder">&#8377 200</span></p>
-      <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+      <span style="color: purple;" class="font-weight-bolder">48hours</span></p>
+      <a style="color: white;background-color:purple" class="btn btn- text-white font-weight-bolder float-right" href="#">View</a>
     </div>
   </div>
 </a>
 <a href="#" class="btn" style="text-align:left; padding:0px; margin:0px;">
-    <div class="card">
+<div class="card">
       <!-- <img src="#" class="card-img-top" alt="guitar"/> -->
       <div class="card-body">
-        <h5 class="card-title">Learn easily</h5>
-        <p class="card-text">frgyhrthytryhrhdfhggggg
-         </p>
+        <h5 style="color: purple;" class="card-title">Communication skills</h5>
+        <p style="color: purple;" class="card-text">Basics about professional English
+          </p>
 
     </div>
     <div class="card-footer">
-      <p class="card-text d-inline">Price:  <small><del>
-        &#8377 2000
+      <p style="color: purple;" class="card-text d-inline">Duration:  <small><del>
+       
       </del></small>
-      <span class="font-weight-bolder">&#8377 200</span></p>
-      <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+      <span style="color: purple;" class="font-weight-bolder">48hours</span></p>
+      <a style="color: white;background-color:purple" class="btn btn- text-white font-weight-bolder float-right" href="#">View</a>
     </div>
   </div>
 </a>
 <a href="#" class="btn" style="text-align:left; padding:0px; margin:0px;">
-    <div class="card">
+<div class="card">
       <!-- <img src="#" class="card-img-top" alt="guitar"/> -->
       <div class="card-body">
-        <h5 class="card-title">Learn easily</h5>
-        <p class="card-text">frgyhrthytryhrhdfhggggg
-         </p>
+        <h5 style="color: purple;" class="card-title">Team worki skills </h5>
+        <p style="color: purple;" class="card-text">Basics about professional English
+          </p>
 
     </div>
     <div class="card-footer">
-      <p class="card-text d-inline">Price:  <small><del>
-        &#8377 2000
+      <p style="color: purple;" class="card-text d-inline">Duration:  <small><del>
+       
       </del></small>
-      <span class="font-weight-bolder">&#8377 200</span></p>
-      <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+      <span style="color: purple;" class="font-weight-bolder">10hours</span></p>
+      <a style="color: white;background-color:purple" class="btn btn- text-white font-weight-bolder float-right" href="#">View</a>
     </div>
   </div>
 </a>
@@ -150,53 +150,53 @@
     <div class="card">
       <!-- <img src="#" class="card-img-top" alt="guitar"/> -->
       <div class="card-body">
-        <h5 class="card-title">Learn easily</h5>
-        <p class="card-text">frgyhrthytryhrhdfhggggg
+        <h5 style="color: purple;" class="card-title">Make a CV</h5>
+        <p style="color: purple;" class="card-text">Basics about professional English
           </p>
 
     </div>
     <div class="card-footer">
-      <p class="card-text d-inline">Price:  <small><del>
-        &#8377 2000
+      <p style="color: purple;" class="card-text d-inline">Duration:  <small><del>
+       
       </del></small>
-      <span class="font-weight-bolder">&#8377 200</span></p>
-      <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+      <span style="color: purple;" class="font-weight-bolder">2hours</span></p>
+      <a style="color: white;background-color:purple" class="btn btn- text-white font-weight-bolder float-right" href="#">View</a>
     </div>
   </div>
 </a>
 <a href="#" class="btn" style="text-align:left; padding:0px; margin:0px;">
-    <div class="card">
+<div class="card">
       <!-- <img src="#" class="card-img-top" alt="guitar"/> -->
       <div class="card-body">
-        <h5 class="card-title">Learn easily</h5>
-        <p class="card-text">frgyhrthytryhrhdfhggggg
-         </p>
-
-    </div>
-    <div class="card-footer">
-      <p class="card-text d-inline">Price:  <small><del>
-        &#8377 2000
-      </del></small>
-      <span class="font-weight-bolder">&#8377 200</span></p>
-      <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
-    </div>
-  </div>
-</a>
-<a href="#" class="btn" style="text-align:left; padding:0px; margin:0px;">
-    <div class="card">
-      <!-- <img src="#" class="card-img-top" alt="guitar"/> -->
-      <div class="card-body">
-        <h5 class="card-title">Learn easily</h5>
-        <p class="card-text">frgyhrthytryhrhdfhggggg
+        <h5 style="color: purple;" class="card-title">Linkedin profile creation</h5>
+        <p style="color: purple;" class="card-text">Basics about professional English
           </p>
 
     </div>
     <div class="card-footer">
-      <p class="card-text d-inline">Price:  <small><del>
-        &#8377 2000
+      <p style="color: purple;" class="card-text d-inline">Duration:  <small><del>
+       
       </del></small>
-      <span class="font-weight-bolder">&#8377 200</span></p>
-      <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+      <span style="color: purple;" class="font-weight-bolder">2hours</span></p>
+      <a style="color: white;background-color:purple" class="btn btn- text-white font-weight-bolder float-right" href="#">View</a>
+    </div>
+  </div>
+</a>
+<a href="#" class="btn" style="text-align:left; padding:0px; margin:0px;">
+<div class="card">
+      <!-- <img src="#" class="card-img-top" alt="guitar"/> -->
+      <div class="card-body">
+        <h5 style="color: purple;" class="card-title">Time Management</h5>
+        <p style="color: purple;" class="card-text">Basics about professional English
+          </p>
+
+    </div>
+    <div class="card-footer">
+      <p style="color: purple;" class="card-text d-inline">Duration:  <small><del>
+       
+      </del></small>
+      <span style="color: purple;" class="font-weight-bolder">8hours</span></p>
+      <a style="color: white;background-color:purple" class="btn btn- text-white font-weight-bolder float-right" href="#">View</a>
     </div>
   </div>
 </a>

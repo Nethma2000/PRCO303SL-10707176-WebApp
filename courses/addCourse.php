@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-Admin home-Courses
+Admin home-Add course
         </title>
 
         <link rel="stylesheet"  href="css/bootstrap.min.css">
@@ -12,8 +12,52 @@ Admin home-Courses
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    </head>
+<?php
+include('dbConnection.php');
+
+if(isset($_REQUEST['courseSubmitBtn'])){
+    if(($_REQUEST['course_name']=="")||($_REQUEST['course_desc']=="")||
+    ($_REQUEST['course_category']=="")||($_REQUEST['course_duration']=="")){
+        $ermsg='<div class="alert alert-warning col-sm-6 ml-5 mt-2">
+        Fill All fields</div>';
+    }
+    else{
+        
+        $course_name=$_REQUEST['course_name'];
+        $course_desc=$_REQUEST['course_desc'];
+        $course_category=$_REQUEST['course_category'];
+        $course_duration=$_REQUEST['course_duration'];
+        $course_image=$_FILES['course_img']['name'];
+        $course_image_temp=$_FILES['course_img']['tmp_name'];
+        $img_folder='../courses/image/courseimg/'.$course_image;
+        move_uploaded_file($course_image_temp,$img_folder);
+
+
+        $sql="INSERT INTO course(course_name,
+        course_desc,course_category,course_img,course_duration)
+        VALUES('$course_name','$course_desc','$course_category','$img_folder','$course_duration')";
+
+        if($conn->query($sql)==TRUE){
+            $ermsg='<div class="alert alert-success col-sm-6 ml-5 mt-2">
+            Course Added Successfully</div>';
+        }
+        else{
+            $ermsg='<div class="alert alert-danger col-sm-6 ml-5 mt-2">
+            Unable to add Course </div>';
+        }
+
+    }
+
+}
+
+?>
+
+</head>
     <body>
+
+
+    
+
         <nav class="navbar navbar-dark fixed-top p-0 shadow"
         style="background-color: purple;">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0"
@@ -62,9 +106,8 @@ Admin home-Courses
                         Settings
                     </a>
                 </li>
-               
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">
+                    <a class="nav-link" href="#">
                         <i class="fas fa-accessibe-icon"></i>
                         Logout
                     </a>
@@ -72,70 +115,50 @@ Admin home-Courses
             </ul>
         </div>
     </nav>
+<div class="col-sm-6 mt-5 mx-3 jumbotron">
+    <h3 class="text-center">Add New Course</h3>
+    <?php if(isset($ermsg)) {
+            echo $ermsg;
+         } ?>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="course_name">CourseName</label>
+            <input type="text" class="form-control" id="course_name" name="course_name">
 
-    <div class="col-sm-9 mt-5">
-        <div class="row mx-5 text-center">
-            <div class="col-sm-4 mt-5">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-            <div class="card-header">Courses</div>
-            <div class="card-body">
-                <h4 class="card-title">5</h4>
-                <a class="btn text-white" href="#">view</a>
-            </div>
-            </div>
-            </div>
-            <div class="col-sm-4 mt-5">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-            <div class="card-header">Enrollments</div>
-            <div class="card-body">
-                <h4 class="card-title">5</h4>
-                <a class="btn text-white" href="#">view</a>
-            </div>
-            </div>
-            </div>
-        
-            <div class="col-sm-4 mt-5">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-            <div class="card-header">Feedbacks</div>
-            <div class="card-body">
-                <h4 class="card-title">5</h4>
-                <a class="btn text-white" href="#">view</a>
-            </div>
-            </div>
-            </div>
         </div>
-        <div class="mx-5 mt-5 text-center">
-            <p class="bg-dark text-white p-2">Courses</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Course ID</th>
-                        <th scope="col">Course Name</th>
-                        <th scope="col">Course Duration</th>
-                        <th scope="col">Course Category</th>
-                        <th scope="col">Course lessons</th>
-
-                        <th scope="col">Acion</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">22</th>
-                        <td>100</td>
-                        <td>dsfg</td>
-                        <td>asdfg</td>
-                        <td>sdf</td>
-                        <td><button type="submit" class="btn btn-secondary" name="delete" value="Delete">
-                            <i class="far fa-trash-alt"></i>
-                        </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="form-group">
+            <label for="course_desc">Course Description</label>
+            <textarea class="form-control" id="course_desc" name="course_desc" row=2></textarea>
+            
         </div>
-    </div>
+        <div class="form-group">
+            <label for="course_category">Course Category</label>
+            <input type="text" class="form-control" id="course_category" name="course_category">
+            
+        </div>
+        <div class="form-group">
+            <label for="course_duration">Course Duration</label>
+            <input type="text" class="form-control" id="course_duration" name="course_duration">
+            
+        </div>
+        <div class="form-group">
+            <label for="course_img">Course Image</label>
+            <input type="file" class="form-control-file" id="course_img" name="course_img">
+            
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-danger" id="courseSubmitBtn"
+            name="courseSubmitBtn">Submit</button>
+            <a href="coursesview.php" class="btn btn-secondary">Close</a>
+        </div>
+
+       
+        <!-- <?php if(isset($ermsg)) {
+            echo $ermsg;
+         } ?> -->
+    </form>
 </div>
+  
 </div>
 </div>
 </div>
