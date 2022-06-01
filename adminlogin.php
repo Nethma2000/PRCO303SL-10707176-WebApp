@@ -11,7 +11,7 @@ $s = "select * from admins where email='$email' && password='$password'";
 $result=mysqli_query($con,$s);
 $num=mysqli_num_rows($result);
 if($num==1){
-    header('location: adminhome.html');
+    header('location: admindashboard.php');
 }
 else{
     echo "Invalid Email or Password";

@@ -28,6 +28,7 @@ require_once("../db.php");
   <!-- Theme style -->
   <link rel="stylesheet" href="../css/AdminLTE.min.css">
   <link rel="stylesheet" href="../css/_all-skins.min.css">
+  
   <!-- Custom -->
   <link rel="stylesheet" href="../css/custom.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

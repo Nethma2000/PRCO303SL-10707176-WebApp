@@ -1,6 +1,4 @@
-<?php
- include('unisession.php');
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,11 +9,12 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
 	<link rel="stylesheet" href="universitydashboard.css">
+    <link rel="stylesheet" type="text/css" href="admindashboard.css">
 
 
-	<title>University Dashboard</title>
+	<title>Admin Dashboard</title>
 </head>
-<body>
+<body onload="initClock()">
 <section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i>
@@ -23,27 +22,27 @@
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
-				<a href="#">
+				<a href="admindashboard.php">
 					<i class='bx bxs-dashboard' ></i>
 					<span  class="text">Dashboard</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="jobPortal/index.php">
 					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">Partnership Companies</span>
+					<span class="text">Job Portal</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
 					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">Trainings</span>
+					<span class="text">Universities</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
 					<i class='bx bxs-message-dots' ></i>
-					<span class="text">Notices</span>
+					<span class="text">Advisors</span>
 				</a>
 			</li>
 			<li>
@@ -52,21 +51,36 @@
 					<span class="text">Students</span>
 				</a>
 			</li>
+            <li>
+				<a href="courses/main.php">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Courses</span>
+				</a>
+			</li>
+            <li>
+				<a href="career-guidance-tips-files/admin-files-upload.php">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Tips</span>
+				</a>
+			</li>
+            <li>
+				<a href="trainingvideos/addvideo.php">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Training Videos</span>
+				</a>
+			</li>
 			
 		</ul>
 		<ul class="side-menu">
-			<li>
-				<a href="#">
-					<i class='bx bxs-cog' ></i>
-					<span class="text">Profile</span>
-				</a>
-			</li>
+			
 			<li>
 				<a href="universitylogout.php" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
 				</a>
 			</li>
+            <img style="width: 200px;height:100px" src="images/Career nextgen logo.png">
+
 		</ul>
 	</section>
 	<!-- SIDEBAR -->
@@ -78,15 +92,13 @@
 		<!-- NAVBAR -->
 		<nav>
 			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">University Dashboard</a>
+			<a href="#" class="nav-link">Admin Dashboard</a>
 			<form action="#">
-            <h1 align='center'>Welcome <?php echo $loggedin_session; ?>,</h1>
+            <h1 align='center'>Welcome,</h1>
 
 			</form>
-            <input readonly type="text" class="form-control" id="university_name" name="university_name" value="<?php echo $loggedin_session; ?>">
-		
+
 			<a href="#" class="profile">
-				<img src="img/people.png">
 			</a>
 		</nav>
 		<!-- NAVBAR -->
@@ -105,6 +117,7 @@
 							<a class="active" href="#">Home</a>
 						</li>
 					</ul>
+
 				</div>
 				
 			</div>
@@ -136,10 +149,10 @@
 
 			<div class="table-data">
 				<div class="order">
-					<div class="head">
-						<h3>Admin Panel Details</h3>
+					<!-- <div class="head">
+						
 					
-					</div>
+					</div> -->
 					<table>
 						<thead>
 							<tr>
@@ -176,60 +189,80 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="todo">
-               <img style="width: 350px;height:250px" src="images/Career nextgen logo.png">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="back">
-        <div class="contentback">
-          <div class="backcontainer">
-          </div>
-        </div>
-      </div>
+                <div class="datetime">
+    <div class="date">
+      <span id="dayname">Day</span>,
+      <span id="month">Month</span>
+      <span id="daynum">00</span>,
+      <span id="year">Year</span>
     </div>
-  </div>
-</body>
-          </div>
-        </div>
+    <div class="time">
+      <span id="hour">00</span>:
+      <span id="minutes">00</span>:
+      <span id="seconds">00</span>
+      <span id="period">AM</span>
+    </div>
+  </div>  
+  
+  
+  <script type="text/javascript">
+  function updateClock(){
+    var now = new Date();
+    var dname = now.getDay(),
+        mo = now.getMonth(),
+        dnum = now.getDate(),
+        yr = now.getFullYear(),
+        hou = now.getHours(),
+        min = now.getMinutes(),
+        sec = now.getSeconds(),
+        pe = "AM";
 
-      </div>
-    </div>
-    
-				</div>
-			</div>
-		</main>
-		<!-- MAIN -->
-	</section>
-	<!-- CONTENT -->
+        if(hou >= 12){
+          pe = "PM";
+        }
+        if(hou == 0){
+          hou = 12;
+        }
+        if(hou > 12){
+          hou = hou - 12;
+        }
+
+        Number.prototype.pad = function(digits){
+          for(var n = this.toString(); n.length < digits; n = 0 + n);
+          return n;
+        }
+
+        var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+        var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+        var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+        for(var i = 0; i < ids.length; i++)
+        document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+  }
+
+  function initClock(){
+    updateClock();
+    window.setInterval("updateClock()", 1);
+  }
+  </script>
+
+
+      
+     
+
+  
+        
 	
 
 	<script src="universitydashboard.js"></script>
     <script src="calendar.js"></script>
-
-
-<?php
-include('unidbConnection.php');
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 
-?>
-
-<div style = "position:absolute; left:300px; top:100px;" id="center">
-<div id="center-set">
-<!-- <h1 align='center'>Welcome <?php echo $loggedin_session; ?>,</h1> -->
-<!-- <input readonly type="text" class="form-control" id="university_name" name="university_name" value="<?php echo $loggedin_session; ?>"> -->
-<div id="contentbox">
-<?php
-$sql="SELECT * FROM universities where university_email=$loggedin_id";
-$result=mysqli_query($conn,$sql);
-?>
 
 
-
-<body>
 
 
 	<!-- SIDEBAR -->
