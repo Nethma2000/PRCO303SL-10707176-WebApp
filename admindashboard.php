@@ -34,13 +34,13 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="universitycrud/index.php">
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">Universities</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="advisorscrud/index.php">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">Advisors</span>
 				</a>
