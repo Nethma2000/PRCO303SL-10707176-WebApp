@@ -1,7 +1,10 @@
+<?php
+ include('unisession.php');
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
+<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Boxicons -->
@@ -12,10 +15,7 @@
 	<title>University Dashboard</title>
 </head>
 <body>
-
-
-	<!-- SIDEBAR -->
-	<section id="sidebar">
+<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i>
 			<span class="text">Career NextGen</span>
@@ -61,7 +61,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" class="logout">
+				<a href="universitylogout.php" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
 				</a>
@@ -70,7 +70,7 @@
 	</section>
 	<!-- SIDEBAR -->
 
-
+    
 
 	<!-- CONTENT -->
 	<section id="content">
@@ -79,14 +79,11 @@
 			<i class='bx bx-menu' ></i>
 			<a href="#" class="nav-link">University Dashboard</a>
 			<form action="#">
-<input type="text" value="name">
+            <h1 align='center'>Welcome <?php echo $loggedin_session; ?>,</h1>
+
 			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a>
+            <input readonly type="text" class="form-control" id="university_name" name="university_name" value="<?php echo $loggedin_session; ?>">
+		
 			<a href="#" class="profile">
 				<img src="img/people.png">
 			</a>
@@ -232,5 +229,32 @@
 	
 
 	<script src="universitydashboard.js"></script>
+
+<?php
+include('unidbConnection.php');
+
+
+
+
+?>
+
+<div style = "position:absolute; left:300px; top:100px;" id="center">
+<div id="center-set">
+<!-- <h1 align='center'>Welcome <?php echo $loggedin_session; ?>,</h1> -->
+<!-- <input readonly type="text" class="form-control" id="university_name" name="university_name" value="<?php echo $loggedin_session; ?>"> -->
+<div id="contentbox">
+<?php
+$sql="SELECT * FROM universities where university_email=$loggedin_id";
+$result=mysqli_query($conn,$sql);
+?>
+
+
+
+<body>
+
+
+	<!-- SIDEBAR -->
+	
+
 </body>
 </html>

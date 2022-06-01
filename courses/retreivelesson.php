@@ -12,12 +12,16 @@ Admin home-Courses
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+<?php
+include('dbConnection.php');
+
+?>
     </head>
     <body>
         <nav class="navbar navbar-dark fixed-top p-0 shadow"
         style="background-color: purple;">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0"
-    href="adminhome.php">Career NextGen<small class="text-white">Admin-Courses</small></a>
+    href="adminhome.php">Career NextGen<small class="text-white">Admin-Lessons</small></a>
 
     </nav>
 
@@ -62,9 +66,8 @@ Admin home-Courses
                         Settings
                     </a>
                 </li>
-               
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">
+                    <a class="nav-link" href="#">
                         <i class="fas fa-accessibe-icon"></i>
                         Logout
                     </a>
@@ -73,72 +76,58 @@ Admin home-Courses
         </div>
     </nav>
 
-    <div class="col-sm-9 mt-5">
-        <div class="row mx-5 text-center">
-            <div class="col-sm-4 mt-5">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-            <div class="card-header">Courses</div>
-            <div class="card-body">
-                <h4 class="card-title">5</h4>
-                <a class="btn text-white" href="#">view</a>
-            </div>
-            </div>
-            </div>
-            <div class="col-sm-4 mt-5">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-            <div class="card-header">Enrollments</div>
-            <div class="card-body">
-                <h4 class="card-title">5</h4>
-                <a class="btn text-white" href="#">view</a>
-            </div>
-            </div>
-            </div>
-        
-            <div class="col-sm-4 mt-5">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-            <div class="card-header">Feedbacks</div>
-            <div class="card-body">
-                <h4 class="card-title">5</h4>
-                <a class="btn text-white" href="#">view</a>
-            </div>
-            </div>
-            </div>
-        </div>
-        <div class="mx-5 mt-5 text-center">
-            <p class="bg-dark text-white p-2">Courses</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Course ID</th>
-                        <th scope="col">Course Name</th>
-                        <th scope="col">Course Duration</th>
-                        <th scope="col">Course Category</th>
-                        <th scope="col">Course lessons</th>
+   <div class="col-sm-9 mt-5 mx-3">
+   <?php
+require_once("dbConnection.php");
 
-                        <th scope="col">Acion</th>
+$sql="SELECT course_id FROM course";
+$result=$conn->query($sql);
+while($row=$result->fetch_assoc()){
+    $sql="SELECT * FROM course WHERE course_id={$_REQUEST['checkid']}";
+    if(isset($_REQUEST['checkid']) && $_REQUEST['checkid'] ==$row
+    ['course_id']){
+        $result=$conn->query($sql);
+        $row=$result->fetch_assoc();
+        if(($row['course_id'])==$_REQUEST['checkid']){
+         //    $_SESSION['course_id']==$row['course_id'];
+         //    $_SESSION['course_name']==$row['course_name'];
+?>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">22</th>
-                        <td>100</td>
-                        <td>dsfg</td>
-                        <td>asdfg</td>
-                        <td>sdf</td>
-                        <td><button type="submit" class="btn btn-secondary" name="delete" value="Delete">
-                            <i class="far fa-trash-alt"></i>
-                        </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+<h3 class="mt-5 bg-dark text-white p-2">Course ID: <?php if
+(isset($row['course_id'])){ echo $row['course_id'];} ?>
+   &nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp    &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+
+   Course Name: <?php if(isset($row['course_name'])){ echo $row['course_name'];}
+?></h3>
+
+<?php
+             
+        }
+        else{
+         echo "No data";
+     }
+    }
+ 
+ }
+
+
+
+?>
+      
+
+   </div>
+   <div>
+    <a class="btn btn-danger box" href="addLesson.php"><i class="fas fa-plus fa-2x"></i></a>
 </div>
-</div>
-</div>
-</div>
+<?php
+// if(isset($_SESSION['course_id'])){
+//     echo '<div>
+//     <a class="btn btn-danger box" href="addLesson.php"><i class="fas fa-plus fa-2x"></i></a>
+// </div>';
+// }
+// ?>
+  
+
 
 <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

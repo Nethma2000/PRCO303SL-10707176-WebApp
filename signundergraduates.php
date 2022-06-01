@@ -56,11 +56,38 @@
                         <i class="fas fa-layer-group"></i>
                         <input type="text" name="category" placeholder="Category">
                     </div> -->
-                    <div class="input-field">
-                        <i class="fas fa-university"></i>
-                        <input type="text" name="institute"  placeholder="University">
+                    <div  style="font-weight: bold;">University
+                        <!-- <i class="fas fa-university"></i>
+                        <input type="text" name="institute"  placeholder="University"> -->
                         <!-- <input type="text" name="institute" value="NSBM" readonly placeholder="University(Only for Undergrauates)"> -->
-
+                        <select name="institute">
+            <?php 
+  $con = mysqli_connect("localhost","root","123","careernextgen");
+      
+  // mysqli_connect("servername","username","password","database_name")
+ 
+  // Get all the categories from category table
+  $sql = "SELECT * FROM `universities`";
+  $all_categories = mysqli_query($con,$sql);
+ 
+                // use a while loop to fetch data 
+                // from the $all_categories variable 
+                // and individually display as an option
+                while ($university = mysqli_fetch_array(
+                        $all_categories,MYSQLI_ASSOC)):; 
+            ?>
+                <option value="<?php echo $university["university_name"];
+                    // The value we usually set is the primary key
+                ?>">
+                    <?php echo $university["university_name"];
+                        // To show the category name to the user
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+                // While loop must be terminated
+            ?>
+        </select>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-university"></i>

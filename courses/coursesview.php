@@ -42,12 +42,12 @@ include('dbConnection.php');
                         Courses
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="lessons.php">
                         <i class="fas fa-accessibe-icon"></i>
                         Lessons
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="fas fa-accessibe-icon"></i>
@@ -84,11 +84,11 @@ include('dbConnection.php');
 
     ?>
 
-    <div class="col-sm-9 mt-5">
+    <div  class="col-sm-9 mt-5">
       
-        <div class="mx-5 mt-5 text-center">
-            <p class="bg-dark text-white p-2">Courses</p>
-            <table class="table">
+        <div  class="mx-5 mt-5 text-center">
+            <p style = "position:absolute; left:30px; top:-5px;width:100%" class="bg-dark text-white p-2">Courses & Lessons</p>
+            <table style = "position:absolute; left:30px; top:-1px;margin-top:40px" class="table" style="width: 100%;">
                 <thead>
                     <tr>
                         <th scope="col">Course ID</th>
@@ -110,9 +110,14 @@ include('dbConnection.php');
                         echo '<td>'.$row['course_name'].'</td>';
                         echo '<td>'.$row['course_category'].'</td>';
                         echo '<td>'.$row['course_duration'].'</td>';
+                        
                         // echo '<td>'.row['course_id'].'</td>';
                         echo '<td>';
+                    
+                       
+                      
                         echo '
+
                         
                         <form action="editcourse.php" method="POST" class="d-inline">
                         <input type="hidden" name="id" value='.$row['course_id'].'>
@@ -127,12 +132,35 @@ include('dbConnection.php');
                             <i class="far fa-trash-alt"></i>
                         </button>
                         </form>
-                        <!-- </td>
-                        <td><button type="submit" class="btn btn-secondary" name="edit" value="Edit">
-                            <i class="far fa-edit"></i>
-                        </button> -->
-                        </td>
+                      
+                  
+
+
+
+                       
                     </tr>';
+
+                    echo '<td>';
+echo'
+
+
+<form action="lessonview.php" method="POST" class="d-inline">
+<input type="hidden" name="id" value='.$row['course_id'].'>
+<button type="submit" class="btn btn-secondary" name="view" value="add">
+Add Lessons
+</button>
+</form>
+
+<form action="lessondisplay.php" method="POST" class="d-inline">
+<input type="hidden" name="id" value='.$row['course_id'].'>
+<button type="submit" class="btn btn-secondary" name="display" value="Display">
+View 
+</button>
+</form>
+
+</tr>';
+                    
+                 
                      } ?>
                 </tbody>
             </table>

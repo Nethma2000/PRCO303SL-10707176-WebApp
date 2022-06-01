@@ -240,7 +240,7 @@ $result = $conn->query($sql);
 
                         <th>Head</th>
                         <th>number</th>
-                        <th>password</th>
+                        <!-- <th>password</th> -->
 
                         <th>Action</th>
 
@@ -273,7 +273,7 @@ $result = $conn->query($sql);
 
                                 <td><?php echo $row['carerguidanceNumber']; ?></td>
 
-                                <td><?php echo $row['password']; ?></td>
+                                <!-- <td><?php echo $row['password']; ?></td> -->
 
 
 

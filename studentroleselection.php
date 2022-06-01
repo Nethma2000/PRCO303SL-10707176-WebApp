@@ -78,7 +78,7 @@
               </div>
               <p style="font-weight:bolder;color:wheat">If you are a student of any university,please proceed for the undergraduate login and signup from here </p>
          
-              <a style="color:wheat;font-weight:bold;" href="signundergraduates.html" class="small-box-footer">
+              <a style="color:wheat;font-weight:bold;" href="signundergraduates.php" class="small-box-footer">
                 Proceed <i class="fa fa-arrow-circle-right"></i>
               </a>
          

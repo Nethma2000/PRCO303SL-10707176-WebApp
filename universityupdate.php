@@ -77,7 +77,7 @@ if (isset($_GET['university_email'])) {
 
                 <!-- <legend>Personal information:</legend> -->
               
-                First name:<br>
+                University name:<br>
                
                 <input type="text" name="university_name" value="<?php echo $university_name; ?>">
 
@@ -85,34 +85,34 @@ if (isset($_GET['university_email'])) {
 
                 <br>
 
-                Last name:<br>
+                University Address:<br>
 
                 <input type="text" name="university_address" value="<?php echo $university_address; ?>">
 
                 <br>
 
-                Email:<br>
+                University Email:<br>
 
                 <input type="text" name="university_email" value="<?php echo $university_email; ?>">
 
                 <br>
 
-                Password:<br>
+                Contact Number:<br>
 
                 <input type="text" name="university_contactnum" value="<?php echo $university_contactnum; ?>">
 
                 <br>
-                Email:<br>
+                Career Guidance Unit Head:<br>
 
                 <input type="text" name="carerguidanceHead" value="<?php echo $carerguidanceHead; ?>">
 
                 <br>
-                Email:<br>
+                Career Guidance Unit number:<br>
 
                 <input type="text" name="carerguidanceNumber" value="<?php echo $carerguidanceNumber; ?>">
 
                 <br>
-                Email:<br>
+                Passowrd:<br>
 
                 <input type="text" name="password" value="<?php echo $password; ?>">
 

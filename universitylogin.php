@@ -14,9 +14,9 @@ $result=mysqli_query($con,$s);
 $num=mysqli_num_rows($result);
 if($num==1){
     
-        header('location: universitydashboard.html');
+        // header('location: universitydashboard.html');
    
-  
+        header('location: universitydashboard.html');
 }
 else{
     echo "Invalid Email or Password";

@@ -27,7 +27,7 @@ else{
 
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Already registered.Try login or create a account with different email!');
-        window.location.href='signundergraduates.html';
+        window.location.href='signundergraduates.php';
         </script>");
 
     }
@@ -39,7 +39,7 @@ else{
 
         echo ("<script LANGUAGE='JavaScript'>
     window.alert('Registration Succesfull! Login now');
-    window.location.href='signundergraduates.html';
+    window.location.href='signundergraduates.php';
     </script>");
         // echo '<script type="text/javascript">';
         // echo ' alert("JavaScript Alert Box by PHP")';  
