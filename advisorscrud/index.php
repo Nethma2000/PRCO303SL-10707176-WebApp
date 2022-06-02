@@ -51,7 +51,9 @@
 				}
 			?>
 			</div>
-				<a href="#addnew" data-toggle="modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New</a>
+				<a style="background-color:#177373" href="#addnew" data-toggle="modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Add New Advisor</a>
+				<a style="margin-left: 30px;background-color:#62801d" href="../advisors.php" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Approve or Reject Advisor Account Ceation Requests</a>
+
 			</div>
 			<div class="height10">
 			</div>

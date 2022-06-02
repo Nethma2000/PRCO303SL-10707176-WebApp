@@ -11,7 +11,7 @@ require_once("config.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Job Portal</title>
+  <title>Approve/Reject Advisors</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -38,7 +38,7 @@ require_once("config.php");
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body style="background-color: purple;" class="hold-transition skin- sidebar-mini">
+<body style="background-color: white;" class="hold-transition skin- sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -46,33 +46,17 @@ require_once("config.php");
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Navbar Right Menu -->
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-                   
-        </ul>
-      </div>
+     >
     </nav>
   </header>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" style="margin-left: 0px;">
+  <!-- <div class="content-wrapper" style="margin-left: 0px;"> -->
 
-    <section id="candidates" class="content-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="box box-solid">
-              <div class="box-header with-border">
-                <h3 class="box-title">Welcome <b>Admin</b></h3>
-              </div>
-              <div class="box-body no-padding">
-              
-              </div>
-            </div>
-          </div>
-          <div class="col-md-9 bg-white padding-2">
+    <!-- <section id="candidates" class="content-header"> -->
+       
 
-            <h3 style="color: purple;font-weight:bolder;">Companies</h3>
+            <h3 style="color: purple;font-weight:bolder;text-align:center">Approve/Reject Advisor Account Creations</h3>
             <div class="row margin-top-20">
               <div class="col-md-12">
                 <div class="box-body table-responsive no-padding">
@@ -131,7 +115,7 @@ require_once("config.php");
                           }
                         ?>                          
                         </td>
-                        <td><a style="color: red;font-weight:bold;" href="delete-company.php?id=<?php echo $row['id_advisor']; ?>">Delete</a></td>
+                        <td><a style="color: red;font-weight:bold;" href="delete-advisor.php?id=<?php echo $row['id_advisor']; ?>">Delete</a></td>
                       </tr>  
                      <?php
                         }

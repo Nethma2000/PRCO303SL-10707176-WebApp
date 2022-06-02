@@ -1,5 +1,7 @@
 <?php
  include('unisession.php');
+ include('unidbConnection.php');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +15,7 @@
 	<link rel="stylesheet" href="universitydashboard.css">
 
 
-	<title>University Dashboard</title>
+	<title>University Students</title>
 </head>
 <body>
 <section id="sidebar">
@@ -29,7 +31,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="partnershipcompanies/index.php">
+				<a href="#">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">Partnership Companies</span>
 				</a>
@@ -37,17 +39,17 @@
 			<li>
 				<a href="#">
 					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">Industry Trainings</span>
+					<span class="text">Trainings</span>
 				</a>
 			</li>
 			<li>
-				<a href="universitynotices/admin/admin_dashboard.php">
+				<a href="#">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">Notices</span>
 				</a>
 			</li>
 			<li>
-				<a href="unistudents.php">
+				<a href="#">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Students</span>
 				</a>
@@ -85,6 +87,7 @@
 			</form>
             <input readonly type="text" class="form-control" id="university_name" name="university_name" value="<?php echo $loggedin_session; ?>">
 		
+		
 			<a href="#" class="profile">
 				<img src="img/people.png">
 			</a>
@@ -102,7 +105,7 @@
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Home</a>
+							<a class="active" href="#">Students</a>
 						</li>
 					</ul>
 				</div>
@@ -110,76 +113,76 @@
 			</div>
 
 			<ul class="box-info">
-				<li>
-					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>1020</h3>
-						<p>New Order</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3>2834</h3>
-						<p>Visitors</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-dollar-circle' ></i>
-					<span class="text">
-						<h3>$2543</h3>
-						<p>Total Sales</p>
-					</span>
-				</li>
+			<!-- <?php echo $loggedin_session; ?> -->
+			<table id="myTable" class="table table-bordered table-striped">
+					<thead>
+						<th>Name</th>
+						<th>Email</th>
+                        <th>Mobile no.</th>
+						<th>Category</th>
+						<th>Institute</th>
+						<th>Student ID</th>
+					
+						
+						<th>Action</th>
+					</thead>
+					<tbody>
+					
+				
+
+						<?php
+						
+							$sql = "SELECT * FROM students where institute='$loggedin_session'";
+
+						
+
+							//use for MySQLi-OOP
+							$query = $conn->query($sql);
+	
+	
+							while($row = $query->fetch_assoc()){
+	
+						?>
+	
+								<tr>
+	
+	
+	
+									<td><?php echo $row['name']; ?></td>
+	
+									<td><?php echo $row['email']; ?></td>
+                                    <td><?php echo $row['mobile']; ?></td>
+
+									<td><?php echo $row['category']; ?></td>
+	
+									<td><?php echo $row['institute']; ?></td>
+									<td><?php echo $row['stdid']; ?></td>
+	
+	
+	
+	
+	
+									<td>
+	
+										<!-- <a class="btn btn-info" href="universityupdate.php?university_email=<?php echo $row['university_email']; ?>">Edit</a>&nbsp; -->
+										
+										<a class="btn btn-danger" href="delete.php?email=<?php echo $row['email']; ?>">Delete</a>
+									</td>
+								</tr>
+	
+						<?php       }
+						
+	
+						?>
+	
+			
+					</tbody>
+				</table>
 			</ul>
 
 
 			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Admin Panel Details</h3>
-					
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Email</th>
-								<th>Query</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-
-									<p>Nethma Dhananjani</p>
-								</td>
-								<td><a href="mailto:rmndhananjani@gmail.com">Send Mail</a></td>
-								<td><span class="status completed">For student realted queries</span></td>
-							</tr>
-							<tr>
-								<td>
-									<p>Nayana Kalyani</p>
-								</td>
-								<td><a href="mailto:nethud2000@gmail.com">Send Mail</a></td>
-								<td><span class="status pending">For other queries</span></td>
-							</tr>
-							<tr>
-								<td>
-									<p>Viraj Karunarathna</p>
-								</td>
-								<td><a href="mailto:virajlahiru9719@gmail.com">Send Mail</a></td>
-								<td><span class="status process">For application realted queries</span></td>
-							</tr>
-						
-						
-						</tbody>
-					</table>
-				</div>
-				<div class="todo">
-               <img style="width: 350px;height:250px" src="images/Career nextgen logo.png">
-            </div>
-          </div>
+				
         </div>
       </div>
       <div class="back">
@@ -227,7 +230,23 @@ $sql="SELECT * FROM universities where university_email=$loggedin_id";
 $result=mysqli_query($conn,$sql);
 ?>
 
+<!-- 
+<script src="univesitycrud/jquery/jquery.min.js"></script>
+<script src="univesitycrud/bootstrap/js/bootstrap.min.js"></script>
+<script src="univesitycrud/datatable/jquery.dataTables.min.js"></script>
+<script src="univesitycrud/datatable/dataTable.bootstrap.min.js"></script>
+<!-- generate datatable on our table -->
+<script>
+$(document).ready(function(){
+	//inialize datatable
+    $('#myTable').DataTable();
 
+    //hide alert
+    $(document).on('click', '.close', function(){
+    	$('.alert').hide();
+    })
+});
+</script> -->
 
 <body>
 

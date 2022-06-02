@@ -46,7 +46,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="studentscrud/index.php">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Students</span>
 				</a>
