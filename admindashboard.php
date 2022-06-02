@@ -125,24 +125,85 @@
 			<ul class="box-info">
 				<li>
 					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>1020</h3>
-						<p>New Order</p>
-					</span>
+                    <span class="info-box-text">Registered<br> Students </span>
+
+<!-- <span class="text">
+    <h3>1020</h3>
+    <p>New Order</p>
+</span> -->
+
+<?php
+
+$servername = "localhost";
+
+$username = "root"; 
+
+$password = "123"; 
+
+$dbname = "careernextgen"; 
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+
+    die("Connection failed: " . $conn->connect_error);
+
+}
+
+?> 
+<?php
+$sql = "SELECT * FROM students";
+
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $totalno = $result->num_rows;
+} else {
+    $totalno = 0;
+}
+?>
+<span class="info-box-number"><?php echo $totalno; ?></span>
 				</li>
 				<li>
 					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3>2834</h3>
-						<p>Visitors</p>
-					</span>
+                    <span class="info-box-text">Registered<br> Advisors </span>
+
+<!-- <span class="text">
+    <h3>1020</h3>
+    <p>New Order</p>
+</span> -->
+<?php
+$sql = "SELECT * FROM advisors";
+
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $totalno = $result->num_rows;
+} else {
+    $totalno = 0;
+}
+?>
+<span class="info-box-number"><?php echo $totalno; ?></span>
+
 				</li>
 				<li>
-					<i class='bx bxs-dollar-circle' ></i>
-					<span class="text">
-						<h3>$2543</h3>
-						<p>Total Sales</p>
-					</span>
+                <i class='bx bxs-building-house'></i>
+                    <span class="info-box-text">Registered<br> Universities </span>
+
+<!-- <span class="text">
+    <h3>1020</h3>
+    <p>New Order</p>
+</span> -->
+<?php
+$sql = "SELECT * FROM universities";
+
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $totalno = $result->num_rows;
+} else {
+    $totalno = 0;
+}
+?>
+<span class="info-box-number"><?php echo $totalno; ?></span>
+
 				</li>
 			</ul>
 

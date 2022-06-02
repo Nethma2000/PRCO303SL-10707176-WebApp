@@ -164,15 +164,15 @@ if (isset($_POST["email"])) {
                                 <span id="error_last_name" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Enter mobile</label>
+                                <label>Enter age</label>
                                 <input type="text" name="mobileno" id="last_name" class="form-control" />
                                 <span id="error_last_name" class="text-danger"></span>
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label>Enter Company</label>
                                 <input type="text" name="company" id="last_name" class="form-control" />
                                 <span id="error_last_name" class="text-danger"></span>
-                            </div>
+                            </div> -->
 
                             <br />
                             <div align="center">
@@ -188,7 +188,7 @@ if (isset($_POST["email"])) {
                         <div class="panel-heading">Fill Contact Details</div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label>mediumlink</label>
+                                <label>Enter Mobile no</label>
                                 <input type="text" name="medium" id="mobile_no" class="form-control" />
                                 <span id="error_mobile_no" class="text-danger"></span>
                             </div>

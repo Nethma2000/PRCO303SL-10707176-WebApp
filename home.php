@@ -261,8 +261,8 @@
                             <li><i class='bx bxs-check-circle'></i>
                                 Undergraduate interaction</li>
                         </ul>
-                        <button type="button" class="btn float-left"
-                        style="background:linear-gradient(to right,#a506e4, #520670);color: white;">Read More</button>
+                        <!-- <button type="button" class="btn float-left"
+                        style="background:linear-gradient(to right,#a506e4, #520670);color: white;">Read More</button> -->
                         <button type="button" onclick="document.location='universitylogin.html'" class="btn btn-primary float-right"
                             style="background:linear-gradient(to right,#a506e4, #520670);">Join</button>
                     </div>
@@ -283,8 +283,8 @@
                                 <li><i class='bx bxs-check-circle'></i>
                                     Hire suitable Candidates</li>
                         </ul>
-                        <button type="button" class="btn float-left"
-                        style="background:linear-gradient(to right,#a506e4, #520670);color: white;">Read More</button>
+                        <!-- <button type="button" class="btn float-left"
+                        style="background:linear-gradient(to right,#a506e4, #520670);color: white;">Read More</button> -->
                         <button type="button" onclick="document.location='jobPortal/register-company.php'" class="btn btn-primary float-right"
                             style="background:linear-gradient(to right,#a506e4, #520670);">Join</button>
                     </div>
@@ -305,8 +305,8 @@
                                 Maintain Student Interaction</li>
                            
                         </ul>
-                        <button type="button" class="btn float-left"
-                        style="background:linear-gradient(to right,#a506e4, #520670);color: white;">Read More</button>
+                        <!-- <button type="button" class="btn float-left"
+                        style="background:linear-gradient(to right,#a506e4, #520670);color: white;">Read More</button> -->
                         <button type="button" onclick="document.location='advisorregistration.php'" class="btn btn-primary float-right"
                             style="background:linear-gradient(to right,#a506e4, #520670);">Join</button>
                     </div>
@@ -329,9 +329,9 @@
                         </ul>
                         <!-- <button class="btn btn-primary" float-right>Get Started</button> -->
 
-                        <button type="button" class="btn float-left"
-                        style="background:linear-gradient(to right,#a506e4, #520670);color: white;">Read More</button>
-                        <button type="button" onclick="document.location='sign.html'" class="btn btn-primary float-right"
+                        <!-- <button type="button" class="btn float-left"
+                        style="background:linear-gradient(to right,#a506e4, #520670);color: white;">Read More</button> -->
+                        <button type="button" onclick="document.location='studentroleselection.php'" class="btn btn-primary float-right"
                             style="background:linear-gradient(to right,#a506e4, #520670);">Join</button>
                     </div>
                 </div>

@@ -86,6 +86,8 @@ require_once("../db.php");
                   <li><a href="mailbox.php"><i style="color:#8910ad ;" class="fa fa-envelope"></i> Mailbox</a></li>
                   <li><a href="settings.php"><i style="color:#8910ad ;" class="fa fa-gear"></i> Settings</a></li>
                   <li><a href="resume-database.php"><i style="color:#8910ad ;" class="fa fa-user"></i> Resume Database</a></li>
+                  <li><a href="http://localhost/CareerNextGenWeb/uni-company-chat/login.php"><i style="color:#8910ad ;" class="fa fa-message"></i> Chat with Universities or companies</a></li>
+
                   <li><a href="../logout.php"><i style="color:#8910ad ;" class="fa fa-arrow-circle-o-right"></i> Logout</a></li>
                 </ul>
               </div>

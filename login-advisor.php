@@ -49,7 +49,7 @@ session_start();
                             <input type="password" class="input" name="password" placeholder="Password">
                         </div>
                     </div>
-                    <a href="#">Forgot Password?</a><br>
+                    <!-- <a href="#">Forgot Password?</a><br> -->
                     <a style="color: purple;" href="advisorregistration.php">Don't have an account? Create a new account </a>
 
                     <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
